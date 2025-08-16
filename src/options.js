@@ -21,11 +21,22 @@ const send = (type, payload) =>
           <button data-key="${key}" class="btn-danger del">Delete</button>
         </div>
       `;
+      
+      // Make the entire row clickable to open the URL in a new tab
+      div.style.cursor = "pointer";
+      div.addEventListener("click", (e) => {
+        // Don't open if clicking on the delete button or its children
+        if (!e.target.closest(".shortcut-actions")) {
+          window.open(shortcuts[key], "_blank");
+        }
+      });
+      
       list.appendChild(div);
     });
   
     list.querySelectorAll(".del").forEach(btn => {
       btn.addEventListener("click", async e => {
+        e.stopPropagation(); // Prevent the row click from firing
         const key = e.target.getAttribute("data-key");
         await send("deleteShortcut", { key });
         load();
