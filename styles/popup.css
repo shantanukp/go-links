@@ -45,7 +45,7 @@ body {
   background: var(--bg);
   border-radius: 0 0 var(--radius) var(--radius);
   padding: 24px;
-  min-height: calc(100vh - 2px);
+  min-height: calc(80vh - 2px);
 }
 
 /* Header section */

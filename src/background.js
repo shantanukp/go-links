@@ -62,11 +62,11 @@ chrome.omnibox.onInputEntered.addListener(async (input, disposition) => {
       target = ensureUrl(base);
     }
   } else {
-    // Not a known key. If it looks like a URL, go there; else do a web search.
+    // Not a known key. If it looks like a URL, go there; else open options page.
     if (/^[\w.-]+\.[a-z]{2,}($|\/|\?)/i.test(raw)) {
       target = ensureUrl(raw);
     } else {
-      target = "https://www.google.com/search?q=" + encodeURIComponent(raw);
+      target = chrome.runtime.getURL("pages/options.html");
     }
   }
 

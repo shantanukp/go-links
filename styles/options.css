@@ -121,6 +121,9 @@ textarea {
   resize: vertical;
   font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
   font-size: 13px;
+  width: 100%;
+  display: block;
+  margin-top: 12px;
 }
 
 /* Buttons */
@@ -176,15 +179,15 @@ button {
 
 /* Shortcuts list */
 .shortcuts-list {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .shortcut-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px;
-  margin-bottom: 8px;
+  padding: 10px 14px;
+  margin-bottom: 4px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -199,12 +202,12 @@ button {
 
 .shortcut-key {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--primary);
-  min-width: 160px;
+  min-width: 140px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .shortcut-key::before {
@@ -216,7 +219,7 @@ button {
 .shortcut-url {
   flex: 1;
   color: var(--text-secondary);
-  font-size: 13px;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
