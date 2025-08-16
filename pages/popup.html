@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Go Links</title>
+  <link rel="stylesheet" href="../styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Go Links</h1>
+      <p>Create quick shortcuts to your favorite sites</p>
+    </div>
+    
+    <div class="content">
+      <div class="form-group">
+        <label for="key">Shortcut name</label>
+        <input id="key" placeholder="e.g., design, docs, calendar" autofocus />
+      </div>
+      
+      <div class="form-group">
+        <label for="url">Destination URL</label>
+        <div class="input-group">
+          <input id="url" placeholder="https://example.com" />
+          <button id="use" class="btn-secondary">Use current tab</button>
+        </div>
+      </div>
+      
+      <button id="save" class="btn-primary">Save Shortcut</button>
+      
+      <div class="shortcut-hint">
+        Type <code>go</code> + space in the address bar to use your shortcuts
+      </div>
+      
+      <div class="actions">
+        <a href="#" id="options" class="manage-link">Manage all shortcuts</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="../src/popup.js"></script>
+</body>
+</html>

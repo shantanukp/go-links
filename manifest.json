@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Go Links",
+    "description": "Type `go <space>` to jump to your shortcuts.",
+    "version": "1.0.0",
+    "omnibox": { "keyword": "go" },
+    "permissions": ["storage", "tabs"],
+    "action": { "default_popup": "pages/popup.html" },
+    "options_page": "pages/options.html",
+    "background": { "service_worker": "src/background.js" },
+    "icons": { "128": "icons/icon128.png" }
+  }
+  

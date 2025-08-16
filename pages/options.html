@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Go Links – Options</title>
+  <link rel="stylesheet" href="../styles/options.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Go Links</h1>
+    <p>Type <code>go</code> + space in the address bar to use your shortcuts</p>
+  </div>
+
+  <div class="card">
+    <h2>Add a shortcut</h2>
+    <div class="form-row">
+      <input id="key" placeholder="Shortcut name (e.g., design, docs)" />
+      <input id="url" placeholder="https://example.com/page" />
+      <button id="add" class="btn-primary">Save Shortcut</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Your shortcuts</h2>
+    <div id="list" class="shortcuts-list">
+      <div class="empty-state">No shortcuts yet. Create your first one above!</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Import / Export</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 16px;">
+      Back up your shortcuts or transfer them between devices
+    </p>
+    <div class="import-export-actions">
+      <button id="export" class="btn-secondary">Export to JSON</button>
+      <button id="import" class="btn-secondary">Import from JSON</button>
+    </div>
+    <textarea id="json" placeholder='{"design":"https://figma.com/...", "docs":"https://docs.google.com/..."}'></textarea>
+  </div>
+
+  <script src="../src/options.js"></script>
+</body>
+</html>
